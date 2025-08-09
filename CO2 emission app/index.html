@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CO2 Emission Predictor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>🚗 CO2 Emission Predictor</h1>
+        <div class="card">
+            <input type="number" id="engineSize" placeholder="Engine Size (L)" min="0.5" max="8.0" step="0.1" required>
+            <input type="number" id="cylinders" placeholder="Cylinders" min="2" max="16" step="1" required>
+            <input type="number" id="fuelCity" placeholder="Fuel Consumption City (L/100 km)" min="1" max="30"
+                step="0.1" required>
+            <input type="number" id="fuelHwy" placeholder="Fuel Consumption Hwy (L/100 km)" min="1" max="25" step="0.1"
+                required>
+            <input type="number" id="fuelComb" placeholder="Fuel Consumption Comb (L/100 km)" min="1" max="28"
+                step="0.1" required>
+            <input type="number" id="fuelMpg" placeholder="Fuel Consumption Comb (mpg)" min="5" max="80" step="1"
+                required>
+            <button onclick="predict()">🔮 Predict CO2</button>
+
+        </div>
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <h2>Result!</h2>
+                <p>Predicted CO2 Emission: <span id="popup-value">--</span> g/km</p>
+
+                <button onclick="closePopup()">Close</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
